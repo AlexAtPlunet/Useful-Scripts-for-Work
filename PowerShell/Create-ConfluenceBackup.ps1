@@ -130,7 +130,7 @@ $BackupParams = @{
     ApiToken            = $ApiToken
     FilePrefix          = $FilePrefix
     DestinationPath     = $DestinationPath
-    IncludeAttachments  = $IncludeAttachmentsIntranet
+    IncludeAttachments  = $IncludeAttachments
     PollIntervalSeconds = $PollIntervalSeconds
     MaxWaitMinutes      = $MaxWaitMinutes
 }
