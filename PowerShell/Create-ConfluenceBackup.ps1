@@ -103,6 +103,9 @@ function Create-ConfluenceBackup
                 $backupReady = $statusContent.currentStatus -eq "COMPLETE"
                 
                 Write-Host "Current backup status is $($backupStatusOutput)"
+                if ((Get-Date) -gt $deadline) {
+                    throw ('Abort: Backup creation still not completed after {0} minutes.' -f $MaxWaitMinutes)
+                }
             }
 
              #Identify file location to download
